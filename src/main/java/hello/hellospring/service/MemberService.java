@@ -9,7 +9,11 @@ import java.util.Optional;
 
 public class MemberService {
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
+
+    public MemberService(MemberRepository memberRepository){
+        this.memberRepository = memberRepository;
+    }
 
     //회원 가입
     public Long join(Member member){
@@ -40,4 +44,4 @@ public class MemberService {
 }
 
 //optional 감싸는 단축키 옵+커+v
-//메소드로 만들기 컨+t
+//메소드로 만들기 옵+커+m (컨+t)
